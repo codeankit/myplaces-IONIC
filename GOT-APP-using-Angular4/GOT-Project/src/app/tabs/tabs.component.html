@@ -1,0 +1,14 @@
+<div>
+  <ul class="nav nav-tabs">
+    <li role="presentation" [ngClass]="{active: chosenList === 'all' }">
+      <a (click)="onChoose('all')" >All</a>
+    </li>
+    <li role="presentation" [ngClass]="{active: chosenList === 'Alive' }">
+      <a (click)="onChoose('Alive')" >Alive</a>
+    </li>
+    <li role="presentation" [ngClass]="{active: chosenList === 'Dead' }">
+      <a (click)="onChoose('Dead')" >Dead</a>
+    </li>
+  </ul>
+  <app-list [characters]="getCharacters()" ></app-list>
+</div>
